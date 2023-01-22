@@ -9,6 +9,7 @@ Message::~Message()
 }
 void Message::setMessage(std::string message)
 {
+	_message = message;
 }
 
 std::string Message::getMessage() const

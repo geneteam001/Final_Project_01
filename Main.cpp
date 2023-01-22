@@ -23,9 +23,9 @@ int main()
 
 
 	//Вызываем конструктор Array для типа User - пользователи
-	Array_U* usersPtr = new Array_U;
+	Array_U<>* usersPtr = new Array_U<>;
 	//Получаем ссылку на пользователей
-	Array_U& users = *usersPtr;
+	Array_U<>& users = *usersPtr;
 
 	//Создаём временного пользователя
 	User userTmp;

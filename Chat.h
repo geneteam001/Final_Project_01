@@ -1,9 +1,8 @@
 #pragma once
-#include "Array_M.h"
-#include "Array_U.h"
-//#include "Array_M.h"
-//#include "Message.h"
+//#include "Array.h"
+//#include "Array_U.h"
 //#include "User.h"
+
 class Chat
 {
 public:
@@ -14,8 +13,10 @@ public:
 	//////	//_users.insertElementBeginning(*user);
 	//////	_users.insertElementEnd(&user);
 	//////}
-	//////void printUsers();
 
+
+	//void printUsers();
+	virtual void printMessage();
 
 
 
@@ -28,7 +29,7 @@ public:
 
 
 	
-	void printMessage();*/
+	*/
 
 
 
@@ -42,26 +43,20 @@ protected:
 			// 
 			// 
 			// 
-	Array_M _messages;
-	Array_U _uessages;
+
+	//Array_M<Message> _users;
 
 
 
 };
 
-Chat::Chat()
-{
-}
 
-Chat::~Chat()
-{
-}
 
-//////void Chat::printUsers()
-//////{
-//////	_users.print();
-//////}
-
+//void Chat::printUsers()
+//{
+//	_users.print();
+//}
+//
 //inline void Chat::printMessage()
 //{
 //	_messages.print();

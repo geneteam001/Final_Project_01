@@ -4,13 +4,6 @@
 #include <string>
 #include "MyException.h"
 
-#include "Message.h"
-#include "User.h"
-
-//class Message;
-//class User;
-//#include "Chat.h" //может закомментить?
-
 template <typename T = int> class Array
 {
 
@@ -204,7 +197,7 @@ public:
 
     virtual void print()
     {
-      /*  if (_dataPtr)
+       /* if (_dataPtr)
         {
             for (size_t i = 0; i < _size; i++)
             {
