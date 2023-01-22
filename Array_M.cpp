@@ -1,15 +1,14 @@
 #include "Array_M.h"
 
-Array_M<>::Array_M()
+template<> Array_M<Message>::Array_M()
 {
 }
 
-Array_M<Message>::~Array_M()
+template<> Array_M<Message>::~Array_M()
 {
 }
 
-template<>
-void Array_M<Message>::print()
+template<> void Array_M<Message>::print()
 {
     if (_dataPtr)
     {

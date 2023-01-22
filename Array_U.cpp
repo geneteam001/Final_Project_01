@@ -1,10 +1,10 @@
 #include "Array_U.h"
 
-Array_U<>::Array_U()
+template<> Array_U<User>::Array_U()
 {
 }
 
-Array_U<>::~Array_U()
+template<> Array_U<User>::~Array_U()
 {
 }
 

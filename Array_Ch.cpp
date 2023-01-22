@@ -1,14 +1,14 @@
 #include "Array_Ch.h"
 
-Array_Ch<>::Array_Ch()
+template<> Array_Ch<Chat>::Array_Ch()
 {
 }
 
-Array_Ch<>::~Array_Ch()
+template<> Array_Ch<Chat>::~Array_Ch()
 {
 }
 
-void Array_Ch<>::print()
+template<> void Array_Ch<Chat>::print()
 {
 	if (_dataPtr)
 	{
