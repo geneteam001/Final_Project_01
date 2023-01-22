@@ -8,7 +8,7 @@ template <typename T = User> class Array_U : public Array<T>
 public:
 	Array_U();
 	~Array_U();
-	//virtual void print();
+	virtual void print();
 private:
 
 };

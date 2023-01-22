@@ -2,6 +2,7 @@
 //#include "Array.h"
 //#include "Array_U.h"
 //#include "User.h"
+#include "Array_M.h"
 
 class Chat
 {
@@ -20,16 +21,16 @@ public:
 
 
 
-	/*void addMessage(Message message)
+	void addMessage(Message message)
 	{
-		_messages._insertElementEnd(message);
+		_messages.insertElementEnd(message);
 		
 
 	}
 
 
 	
-	*/
+	
 
 
 
@@ -44,7 +45,7 @@ protected:
 			// 
 			// 
 
-	//Array_M<Message> _users;
+	Array_M<Message> _messages;
 
 
 

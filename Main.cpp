@@ -45,7 +45,7 @@ int main()
 
 	//Раскоментить!!!
 	//создаём чат
-	//Chat* chat = new Chat;
+	Chat* chat = new Chat;
 
 	//////////////////////////////////////cout << " print chat users here :" << endl;
 	//////////////////////////////////////chat->printUsers();
@@ -144,12 +144,12 @@ int main()
 
 		Message messageTmp;
 		messageTmp.setMessage("Hello!");
-		/*chat->addMessage(messageTmp);
+		chat->addMessage(messageTmp);
 		chat->printMessage();
 
 		messageTmp.setMessage("World!");
 		chat->addMessage(messageTmp);
-		chat->printMessage();*/
+		chat->printMessage();
 
 
 
