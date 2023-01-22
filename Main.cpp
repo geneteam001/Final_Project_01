@@ -87,35 +87,35 @@ int main()
 
 			switch (cmd)
 			{
-			//case 2: std::cout << "insert your name" << std::endl; //login
+			case 2: std::cout << "insert your name" << std::endl; //login
 
-			//	std::cin >> name;
-			//	std::cout << name << endl;
-			//	userTmp.setLogin(name);
-			//	users.print();
-			//	std::cout << users.findElement(userTmp) << std::endl;
-			//	if (users.findElement(userTmp) >= 0)
-			//		std::cout << "loged" << std::endl;
-			//	else
-			//		std::cout << "No such user" << std::endl;
-			//	std::cout << "register user " << userTmp.getLogin() << "? (y/n)" << std::endl;
-			//	std::cin >> choice;
-			//	if (choice == 'y')
+				std::cin >> name;
+				std::cout << name << endl;
+				userTmp.setLogin(name);
+				users.print();
+				std::cout << users.findElement(userTmp) << std::endl;
+				if (users.findElement(userTmp) >= 0)
+					std::cout << "loged" << std::endl;
+				else
+					std::cout << "No such user" << std::endl;
+				std::cout << "register user " << userTmp.getLogin() << "? (y/n)" << std::endl;
+				std::cin >> choice;
+				if (choice == 'y')
 
-			//	{
-			//		std::cout << "insert your password:" << std::endl;
-			//		std::cin >> pass;
-			//		userTmp.setPass(pass);
-			//		users.insertElementEnd(userTmp);
-			//		users.print();
-			//		std::cout << users.findElement(userTmp) << std::endl;
+				{
+					std::cout << "insert your password:" << std::endl;
+					std::cin >> pass;
+					userTmp.setPass(pass);
+					users.insertElementEnd(userTmp);
+					users.print();
+					std::cout << users.findElement(userTmp) << std::endl;
 
-			//	}
+				}
 
-			//	else if (choice == 'n')
-			//		;
+				else if (choice == 'n')
+					;
 
-			//	break;
+				break;
 
 
 

@@ -8,27 +8,27 @@ User::~User()
 {
 }
 
-inline void User::setID(unsigned long long ID)
+void User::setID(unsigned long long ID)
 {
 	_ID = ID;
 }
 
-inline void User::setLogin(std::string login)
+void User::setLogin(std::string login)
 {
     _login = login;
 }
 
-inline void User::setPass(std::string pass)
+void User::setPass(std::string pass)
 {
     _pass = pass;
 }
 
-inline unsigned long long User::getID() const
+unsigned long long User::getID() const
 {
     return _ID;
 }
 
-inline std::string User::getLogin() const
+std::string User::getLogin() const
 {
    return _login;
 }

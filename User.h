@@ -1,6 +1,5 @@
 #pragma once
 
-#include <string>
 #include "Array_Ch.h"
 
 class User
