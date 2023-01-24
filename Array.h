@@ -195,7 +195,7 @@ public:
         return -1;
     };
 
-    virtual void print()
+    /*virtual */void print()
     {
        /* if (_dataPtr)
         {

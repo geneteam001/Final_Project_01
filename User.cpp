@@ -43,3 +43,18 @@ void User::printUser()
     std::cout << " Login: " << _login << std::endl;
     std::cout << " Pass: " << _pass << std::endl;
 }
+
+void User::addChat(Chat* chat)
+{
+    _chats.insertElementEnd(chat);
+}
+
+void User::printChat(Chat* chat)
+{
+    _chats.print();
+}
+
+
+
+
+

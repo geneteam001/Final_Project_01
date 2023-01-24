@@ -1,10 +1,14 @@
-#pragma once
+//#pragma once
 //#include "Chat.h"
 
 //#include <time.h>
 //#include <chrono>
 //#include <windows.h>
-#include <string>
+
+
+
+#include <iostream>
+//#include <string>
 
 #include "User.h"
 #include "Array_U.h"
@@ -27,6 +31,13 @@ int main()
 	//Получаем ссылку на пользователей
 	Array_U<>& users = *usersPtr;
 
+
+
+
+	Message messageTmp;
+
+
+
 	//Создаём временного пользователя
 	User userTmp;
 	//////////////////////////////////////////Array<User> Usersvvv;
@@ -45,20 +56,22 @@ int main()
 
 	//Раскоментить!!!
 	//создаём чат
-	Chat* chat = new Chat;
+	Chat* chatPtr = new Chat;
+	Chat& chat = *chatPtr;
 
 	//////////////////////////////////////cout << " print chat users here :" << endl;
 	//////////////////////////////////////chat->printUsers();
 	//////////////////////////////////////cout << endl << endl;
 
-	//////////////////////////////////////// создаём временного пользователя и добавляем его в конец
-	//////////////////////////////////////userTmp.setLogin("tmpUserLogin1");
-	//////////////////////////////////////userTmp.setPass("tmpUserPass1");
-	//////////////////////////////////////users.insertElementEnd(userTmp);
+	// создаём временного пользователя и добавляем его в конец
+	userTmp.setLogin("tmpUserLogin1");
+	userTmp.setPass("tmpUserPass1");
+	users.insertElementEnd(userTmp);
 
-	//////////////////////////////////////// ищем нужного пользователя в пользователях и добавляем его в чат первым
-	//////////////////////////////////////chat->addUser(users[usersPtr->findElement(userTmp)]);
-	//////////////////////////////////////chat->addUser(users[0]);
+	////////////// ищем нужного пользователя в пользователях и добавляем его в чат первым
+	////////////chat->addUser(users[usersPtr->findElement(userTmp)]);
+	////////////chat->addUser(users[0]);
+
 
 	////////////////////////////////////////меняем пароль пользователю 0 через использование ссылки и проверяем, что пароль изменился 
 	//////////////////////////////////////users[0].setPass("PassChanged");
@@ -95,25 +108,68 @@ int main()
 				users.print();
 				std::cout << users.findElement(userTmp) << std::endl;
 				if (users.findElement(userTmp) >= 0)
-					std::cout << "loged" << std::endl;
-				else
-					std::cout << "No such user" << std::endl;
-				std::cout << "register user " << userTmp.getLogin() << "? (y/n)" << std::endl;
-				std::cin >> choice;
-				if (choice == 'y')
-
 				{
-					std::cout << "insert your password:" << std::endl;
-					std::cin >> pass;
-					userTmp.setPass(pass);
-					users.insertElementEnd(userTmp);
-					users.print();
-					std::cout << users.findElement(userTmp) << std::endl;
+					std::cout << "loged" << std::endl;
+
+					std::cout << "Hello World must be printed here" << std::endl;
+					messageTmp.setMessage("Hello!");
+					chatPtr->addMessage(messageTmp);
+					//chat->printMessage();
+
+					messageTmp.setMessage("World!");
+					chatPtr->addMessage(messageTmp);
+					chatPtr->printMessage();
+
+
+
+
+					try
+					{
+						users[0].addChat(chatPtr);
+						std::cout << "print chat here" << std::endl;
+						users[0].printChat(chatPtr);
+						std::cout << "end print chat here" << std::endl;
+					}
+
+					catch (exception& except)
+					{
+						cout << endl << except.what() << endl;
+					}
+
+
+
 
 				}
+				else
+				{
+					std::cout << "No such user" << std::endl;
+					std::cout << "register user " << userTmp.getLogin() << "? (y/n)" << std::endl;
+					std::cin >> choice;
+					if (choice == 'y')
+					{
+						std::cout << "insert your password:" << std::endl;
+						std::cin >> pass;
+						userTmp.setPass(pass);
+						users.insertElementEnd(userTmp);
+						users.print();
+						std::cout << users.findElement(userTmp) << std::endl;
 
-				else if (choice == 'n')
-					;
+
+
+
+						
+
+
+
+
+
+					}
+					else if (choice == 'n')
+					{
+
+					}
+				}
+
 
 				break;
 
@@ -142,14 +198,7 @@ int main()
 					printf("The system time is: %02d:%02d\n", st.wHour, st.wMinute);
 					printf(" The local time is: %02d:%02d\n", lt.wHour, lt.wMinute);*/
 
-		Message messageTmp;
-		messageTmp.setMessage("Hello!");
-		chat->addMessage(messageTmp);
-		chat->printMessage();
 
-		messageTmp.setMessage("World!");
-		chat->addMessage(messageTmp);
-		chat->printMessage();
 
 
 

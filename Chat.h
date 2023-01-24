@@ -19,14 +19,8 @@ public:
 	//void printUsers();
 	virtual void printMessage();
 
-
-
-	void addMessage(Message message)
-	{
-		_messages.insertElementEnd(message);
-		
-
-	}
+	void addMessage(Message message);
+	
 
 
 	
@@ -38,7 +32,7 @@ public:
 protected:
 
 			////здесь массив пользователей именно этого чата
-	//////Array<User*> _users;
+	//Array_U<User*> _users;
 			////здесь массив сообщений чата
 			// 
 			// 

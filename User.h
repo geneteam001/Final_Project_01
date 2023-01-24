@@ -14,12 +14,14 @@ public:
 	std::string getLogin() const;
 	std::string getPass() const;
 	void printUser();
+	void addChat(Chat* chat);
+	void printChat( Chat* chat);
 private:
 	std::string _login;
 	std::string _pass;
 	unsigned long long _ID {0};
 	
-	Array_Ch<> _chats;
+	Array_Ch<Chat*> _chats;
 	
 
 };

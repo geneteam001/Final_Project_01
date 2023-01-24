@@ -1,5 +1,6 @@
 //#pragma once
 #include "Message.h"
+#include <iostream>
 
 Message::Message()
 {
@@ -19,4 +20,5 @@ std::string Message::getMessage() const
 
 void Message::printMessage()
 {
+	std::cout << _message << std::endl;
 }
