@@ -8,8 +8,12 @@ template <typename T = User> class Array_U : public Array<T>
 public:
 	Array_U();
 	~Array_U();
-	virtual void print();
+	void print();
+
+	 int findElement(T);
+//int findElement(User*);
 private:
 
 };
+
 

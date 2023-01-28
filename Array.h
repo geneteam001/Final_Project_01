@@ -176,34 +176,34 @@ public:
 
     virtual int findElement(const T value)
     {
-   /*     int ret{ -1 };
-        if (_dataPtr)
-        {
-            for (size_t i = 0; i < _size; i++)
-            {
-                if (_dataPtr[i] == value)
-                {
-                    ret = i;
-                    break;
-                }
-            }
-            if (ret == -1) {
-                throw MyException("No such element in array!");
-            }
-        }
-        return ret;*/
-        return -1;
+        int ret{ -1 };
+        //if (_dataPtr)
+        //{
+        //    for (size_t i = 0; i < _size; i++)
+        //    {
+        //        if (_dataPtr[i] == value)
+        //        {
+        //            ret = i;
+        //            break;
+        //        }
+        //    }
+        //    if (ret == -1) {
+        //        throw MyException("No such element in array!");
+        //    }
+        //}
+        return ret;
+        //return -1;
     };
 
-    /*virtual */void print()
+    void print()
     {
-       /* if (_dataPtr)
+        if (_dataPtr)
         {
             for (size_t i = 0; i < _size; i++)
             {
                 std::cout << i << " : " << _dataPtr[i] << std::endl;
             }
-        }*/
+        }
     };
 
     //Additional functions

@@ -8,7 +8,6 @@ template<> Array_U<User>::~Array_U()
 {
 }
 
-
 //специализация функции print для класса User
 template<> 
 void Array_U<User>::print()
@@ -22,27 +21,13 @@ void Array_U<User>::print()
 
         }
     }
-};
-
-//специализация функции print для класса User* указателей
-
-template<>
-void Array_U<User*>::print()
-{
-    if (_dataPtr)
-    {
-
-        for (size_t i = 0; i < _size; i++)
-        {
-            (*_dataPtr[i]).printUser();
-        }
-    }
-};
+}
 
 
 //специализация функции findElement для класса User
+//template<> 
 template<>
-int Array<User>::findElement(User user)
+int Array_U<User>::findElement(User user)
 {
     int ret{ -1 };
     if (_dataPtr)
@@ -63,11 +48,34 @@ int Array<User>::findElement(User user)
         //}
     }
     return ret;
+}
+
+
+//специализация функции print для класса User* указателей
+template<>
+void Array_U<User*>::print()
+{
+    if (_dataPtr)
+    {
+
+        for (size_t i = 0; i < _size; i++)
+        {
+            (*_dataPtr[i]).printUser();
+        }
+    }
 };
+
+ template<> Array_U<User*>::Array_U()
+{
+}
+
+template<> Array_U<User*>::~Array_U()
+{
+}
 
 //специализация функции findElement для класса User* указателя
 template<>
-int Array<User*>::findElement(User* user)
+int Array_U<User*>::findElement(User* user)
 {
     int ret{ -1 };
     if (_dataPtr)

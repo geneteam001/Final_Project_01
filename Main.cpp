@@ -1,5 +1,4 @@
 //#pragma once
-//#include "Chat.h"
 
 //#include <time.h>
 //#include <chrono>
@@ -31,64 +30,19 @@ int main()
 	//Получаем ссылку на пользователей
 	Array_U<>& users = *usersPtr;
 
-
-
-
 	Message messageTmp;
 
 
 
 	//Создаём временного пользователя
 	User userTmp;
-	//////////////////////////////////////////Array<User> Usersvvv;
-	////////////////////////////////////////userTmp.setLogin("tmpUserLogin");
-	////////////////////////////////////////userTmp.setPass("tmpUserPass");
-
-
-	////////////////////////////////////////users.setNewSize(3);
-	////////////////////////////////////////users.insertElementBeginning(userTmp);
-
-	//////////////////////////////////////////для пробы выводим пароль пользователя добавленного в начало
-	////////////////////////////////////////cout << "Pass: " << users[0].getPass() << endl;
-
-
-	//////////////////////////////////////////users.insertElement(1, userTmp);
-
-	//Раскоментить!!!
-	//создаём чат
 	Chat* chatPtr = new Chat;
 	Chat& chat = *chatPtr;
-
-	//////////////////////////////////////cout << " print chat users here :" << endl;
-	//////////////////////////////////////chat->printUsers();
-	//////////////////////////////////////cout << endl << endl;
 
 	// создаём временного пользователя и добавляем его в конец
 	userTmp.setLogin("tmpUserLogin1");
 	userTmp.setPass("tmpUserPass1");
 	users.insertElementEnd(userTmp);
-
-	////////////// ищем нужного пользователя в пользователях и добавляем его в чат первым
-	////////////chat->addUser(users[usersPtr->findElement(userTmp)]);
-	////////////chat->addUser(users[0]);
-
-
-	////////////////////////////////////////меняем пароль пользователю 0 через использование ссылки и проверяем, что пароль изменился 
-	//////////////////////////////////////users[0].setPass("PassChanged");
-	//////////////////////////////////////cout << "user 0 password: " << users[0].getPass() << endl;
-
-	////////////////////////////////////////распечатываем пользователей чата
-	//////////////////////////////////////cout << " print chat ussers here :" << endl;
-	//////////////////////////////////////chat->printUsers();
-
-	////////////////////////////////////////for pause
-	////////////////////////////////////////int tmp_int;
-	////////////////////////////////////////cin >> tmp_int;
-	////////////////////////////////////////cout << tmp_int << endl;
-	////////////////////////////////////////end for pause
-
-	//////////////////////////////////////chat->addUser(users[0]);
-
 
 	while (true)
 	{
@@ -114,7 +68,7 @@ int main()
 					std::cout << "Hello World must be printed here" << std::endl;
 					messageTmp.setMessage("Hello!");
 					chatPtr->addMessage(messageTmp);
-					//chat->printMessage();
+					chat.printMessage();
 
 					messageTmp.setMessage("World!");
 					chatPtr->addMessage(messageTmp);
@@ -154,15 +108,6 @@ int main()
 						users.print();
 						std::cout << users.findElement(userTmp) << std::endl;
 
-
-
-
-						
-
-
-
-
-
 					}
 					else if (choice == 'n')
 					{
@@ -185,6 +130,7 @@ int main()
 			cout << endl << except.what() << endl;
 		}
 
+
 		// current date/time based on current system
 	//	time_t now = time(0);
 
@@ -197,10 +143,6 @@ int main()
 
 					printf("The system time is: %02d:%02d\n", st.wHour, st.wMinute);
 					printf(" The local time is: %02d:%02d\n", lt.wHour, lt.wMinute);*/
-
-
-
-
 
 	}
 	return 0;

@@ -1,12 +1,12 @@
 #include "Array_Ch.h"
 
-template<> Array_Ch<Chat>::Array_Ch()
-{
-}
-
-template<> Array_Ch<Chat>::~Array_Ch()
-{
-}
+//template<typename T> Array_Ch<T>::Array_Ch()
+//{
+//}
+//
+//template<typename T> Array_Ch<T>::~Array_Ch()
+//{
+//}
 
 template<> Array_Ch<Chat*>::Array_Ch()
 {

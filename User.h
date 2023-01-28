@@ -15,7 +15,8 @@ public:
 	std::string getPass() const;
 	void printUser();
 	void addChat(Chat* chat);
-	void printChat( Chat* chat);
+	void printChat(Chat* chat);
+
 private:
 	std::string _login;
 	std::string _pass;
