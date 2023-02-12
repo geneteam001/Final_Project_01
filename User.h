@@ -6,6 +6,7 @@ class User
 {
 public:
 	User();
+	User(std::string);
 	~User();
 	void setID(unsigned long long);
 	void setLogin(std::string);
@@ -16,7 +17,7 @@ public:
 	void printUser();
 	void addChat(Chat* chat);
 	void printChat(Chat* chat);
-
+	void printChatNames();
 private:
 	std::string _login;
 	std::string _pass;

@@ -40,13 +40,15 @@ std::string User::getPass() const
 
 void User::printUser()
 {
-    std::cout << " Login: " << _login << std::endl;
-    std::cout << " Pass: " << _pass << std::endl;
+    std::cout << " " << _ID;
+    std::cout << " " << _login << std::endl; /*Login:*/
+    //std::cout << " Pass: " << _pass << std::endl;
 }
 
 void User::addChat(Chat* chat)
 {
     _chats.insertElementEnd(chat);
+    //chat.setID(static_cast<unsigned long long>(_chats.getSize()) + 5);
 }
 
 void User::printChat(Chat* chat)
@@ -54,6 +56,10 @@ void User::printChat(Chat* chat)
     _chats.print();
 }
 
+void User::printChatNames()
+{
+    _chats.printChatNames();
+}
 
 
 

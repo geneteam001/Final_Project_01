@@ -50,6 +50,25 @@ int Array_U<User>::findElement(User user)
     return ret;
 }
 
+//функции findID для класса User
+template<>
+int Array_U<User>::findID(User user)
+{
+    int ret{ -1 };
+    if (_dataPtr)
+    {
+        for (size_t i = 0; i < _size; i++)
+        {
+            if (_dataPtr[i].getID() == user.getID())
+            {
+                ret = i;
+                break;
+            }
+        }
+    }
+    return ret;
+}
+
 
 //специализация функции print для класса User* указателей
 template<>
@@ -94,3 +113,4 @@ int Array_U<User*>::findElement(User* user)
     }
     return ret;
 }
+

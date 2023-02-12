@@ -11,7 +11,7 @@ public:
 	void print();
 
 	 int findElement(T);
-//int findElement(User*);
+	 int findID(T);
 private:
 
 };

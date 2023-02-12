@@ -6,51 +6,16 @@ class Chat
 {
 public:
 	Chat();
+	Chat(std::string chatname);
 	~Chat();
-	//////void addUser(User& user)
-	//////{
-	//////	//_users.insertElementBeginning(*user);
-	//////	_users.insertElementEnd(&user);
-	//////}
-
-
-	//void printUsers();
+	void setID(unsigned long long);
 	virtual void printMessage();
-
 	void addMessage(Message message);
-	
-
-
-	
-	
-
-
-
-
+	unsigned long long getID() const;
+	void printChatName();
 protected:
-
-			////здесь массив пользователей именно этого чата
-	//Array_U<User*> _users;
-			////здесь массив сообщений чата
-			// 
-			// 
-			// 
-			// 
-
+	std::string _chatname;
+	unsigned long long _ID{ 0 };
 	Array_M<Message> _messages;
 
-
-
 };
-
-
-
-//void Chat::printUsers()
-//{
-//	_users.print();
-//}
-//
-//inline void Chat::printMessage()
-//{
-//	_messages.print();
-//}
