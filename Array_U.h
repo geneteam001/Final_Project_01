@@ -12,6 +12,7 @@ public:
 
 	 int findElement(T);
 	 int findID(T);
+	 int findID(int);
 private:
 
 };

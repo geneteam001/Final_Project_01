@@ -22,9 +22,9 @@ private:
 	std::string _login;
 	std::string _pass;
 	unsigned long long _ID {0};
-	
+
 	Array_Ch<Chat*> _chats;
-	
+	Array<int> _readPos; // array of chats read positions
 
 };
 

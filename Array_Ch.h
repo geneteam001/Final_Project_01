@@ -9,7 +9,10 @@ public:
 	Array_Ch();
 	~Array_Ch();
 	void print();
+	
 	int findID(T);
+	int findChatName(T);
+	int findChatName(const std::string);
 	void printChatNames();
 	void addChat(T chat);
 private:

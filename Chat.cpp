@@ -39,3 +39,9 @@ void Chat::printChatName()
 	std::cout << " " << _chatname << std::endl; /*Login:*/
 	//std::cout << " Pass: " << _pass << std::endl;
 }
+
+
+std::string Chat::getChatName() const
+{
+	return _chatname;
+}

@@ -40,12 +40,6 @@ int Array_U<User>::findElement(User user)
                 break;
             }
         }
-
-        //Проверить в других местах и удалить, если не требуется!
-        //if (ret == -1) 
-        //{
-        //    throw MyException("No such element in array!");
-        //}
     }
     return ret;
 }
@@ -69,6 +63,25 @@ int Array_U<User>::findID(User user)
     return ret;
 }
 
+
+//функции findID для типа int
+template<>
+int Array_U<User>::findID(int userID)
+{
+    int ret{ -1 };
+    if (_dataPtr)
+    {
+        for (size_t i = 0; i < _size; i++)
+        {
+            if (_dataPtr[i].getID() == userID)
+            {
+                ret = i;
+                break;
+            }
+        }
+    }
+    return ret;
+}
 
 //специализация функции print для класса User* указателей
 template<>

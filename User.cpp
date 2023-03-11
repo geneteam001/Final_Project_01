@@ -48,7 +48,7 @@ void User::printUser()
 void User::addChat(Chat* chat)
 {
     _chats.insertElementEnd(chat);
-    //chat.setID(static_cast<unsigned long long>(_chats.getSize()) + 5);
+    _readPos.insertElementEnd(_chats.getSize());
 }
 
 void User::printChat(Chat* chat)
