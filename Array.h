@@ -117,7 +117,7 @@ public:
         return _size;
     };
 
-    void insertElement(const int indx, const T value)
+    void insertElement(const int indx, T const value)
     {
 
         int sizeNew{ 0 };
@@ -174,7 +174,7 @@ public:
         return;
     };
 
-    virtual int findElement(const T value)
+    virtual int findElement(T const value)
     {
         int ret{ -1 };
         //if (_dataPtr)
@@ -207,7 +207,7 @@ public:
     };
 
     //Additional functions
-    void insertElementBeginning(const T value)
+    void insertElementBeginning(T const value)
     {
         //if (!getSize())
         //{
@@ -230,7 +230,7 @@ public:
         }
 
     };
-    void insertElementEnd(const T value)
+    void insertElementEnd(T const value)
     {
         //if (!getSize())
         //{
@@ -253,7 +253,7 @@ public:
     {
         removeElement(_size - 1);
     };
-    void setElement(const int indx, const T value)
+    void setElement(const int indx, T const value)
     {
         if (indx < 0 || indx >= _size)
         {

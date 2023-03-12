@@ -7,10 +7,15 @@
 
 template<> Array_Ch<Chat*>::Array_Ch()
 {
+	//временно для диагностики
+	std::cout << " Array_Ch<Chat*> Constructed" << std::endl;
 }
 
 template<> Array_Ch<Chat*>::~Array_Ch()
 {
+	//временно для диагностики
+	print();
+	std::cout << " Array_Ch<Chat*> Destructed" << std::endl;
 }
 
 template<> void Array_Ch<Chat>::print()

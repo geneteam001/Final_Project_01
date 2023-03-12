@@ -10,7 +10,6 @@ public:
     virtual void print();
 
 private:
-
 };
 
 

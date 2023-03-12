@@ -2,10 +2,14 @@
 
 User::User()
 {
+    //Временно для диагностики создания объектов
+    std::cout << _login << " User Constructed" << std::endl;
 }
 
 User::~User()
 {
+    //Временно для диагностики уничтожения объектов
+    std::cout << _login << " User Destructed" << std::endl;
 }
 
 void User::setID(unsigned long long ID)
@@ -13,12 +17,12 @@ void User::setID(unsigned long long ID)
 	_ID = ID;
 }
 
-void User::setLogin(std::string login)
+void User::setLogin(const std::string login)
 {
     _login = login;
 }
 
-void User::setPass(std::string pass)
+void User::setPass(const std::string pass)
 {
     _pass = pass;
 }

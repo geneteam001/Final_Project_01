@@ -12,14 +12,13 @@ using namespace std;
 int main()
 {
 	system("chcp 1251");
-	//setlocale(LC_ALL, ""); // или system("chcp 1251") - кодировка вывода на консоль
 
 	//глобальные переменные
 	bool Q{ false };
 	string userName;
 	string pass;
-	int cmd{2};
-	std::string cmd_input{0};
+	int cmd{0};
+	std::string cmd_input;
 	char choice;
 
 	//создаём массив пользователей и указатель на него User - пользователи
@@ -40,10 +39,6 @@ int main()
 	//создаём "пустого" пользователя и указатель на него
 	User* currentUserPtr{ nullptr };
 
-	//создаём чат и указатель на него
-	Chat* chatPtr = new Chat;
-	Chat& chat = *chatPtr;
-
 	Chat* currentChatPtr{ nullptr };
 
 	currentChatPtr = new Chat("Общий");
@@ -56,7 +51,6 @@ int main()
 
 	while (!Q) //цикл
 	{
-
 		//если есть текущий пользователь - то распечатываем его
 		if (currentUserPtr)
 		{
@@ -78,7 +72,7 @@ int main()
 			cmd = 0;
 		}
 
-		try //обработка исключений - можно не обращать внимание - пока
+		try //обработка исключений
 		{
 			switch (cmd)
 			{
@@ -264,7 +258,6 @@ int main()
 								}
 							}
 
-
 							//послать сообщение
 							{
 								// формируем сообщение
@@ -278,7 +271,6 @@ int main()
 								// преобразуем now в формат string
 								char dt[26];
 								ctime_s(dt, sizeof dt, &now);
-								//dt[24] = ' '; //можно заменить перенос строки на пробел, чтобы печаталось всё в одну строку
 								std::string str = dt;
 								Message currentMessage;
 								currentMessage.setMessage(tmpString);

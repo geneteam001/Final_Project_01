@@ -10,7 +10,7 @@ public:
 	~Array_U();
 	void print();
 
-	 int findElement(T);
+	 int findElement(T) override;
 	 int findID(T);
 	 int findID(int);
 private:

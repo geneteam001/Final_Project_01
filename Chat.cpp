@@ -2,15 +2,21 @@
 
 Chat::Chat()
 {
+	//Временно для диагностики создания объектов
+	std::cout << " Chat Constructed" << std::endl;
 }
 
-Chat::Chat(std::string chatname) :_chatname(chatname)
+Chat::Chat(const std::string chatname) :_chatname(chatname)
 {
+	//Временно для диагностики создания объектов
+	std::cout << " Chat Constructed" << _chatname << std::endl;
 }
 
 
 Chat::~Chat()
 {
+	//Временно для диагностики создания объектов
+	std::cout << " Chat Destructed" << _chatname << std::endl;
 }
 
 void Chat::setID(unsigned long long ID)
@@ -23,7 +29,7 @@ void Chat::printMessage()
 	_messages.print();
 }
 
-void Chat::addMessage(Message message)
+void Chat::addMessage(Message const message)
 {
 	_messages.insertElementEnd(message);
 }
