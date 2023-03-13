@@ -1,39 +1,23 @@
 #pragma once
-#include "Array.h"
-#include "Message.h"
-//#include "User.h"
+
+#include "Array_M.h"
+
 class Chat
 {
 public:
 	Chat();
+	Chat(std::string chatname);
 	~Chat();
-	void addUser(User& user)
-	{
-		//_users.insertElementBeginning(*user);
-		_users.insertElementEnd(&user);
-	}
-	void printUsers();
-private:
-
-	////здесь массив пользователей именно этого чата
-	Array<User*> _users;
-	////здесь массив сообщений чата
-	Array<Message> _messages;
-
-
-
+	void setID(unsigned long long);
+	virtual void printMessage();
+	void addMessage(Message message);
+	unsigned long long getID() const;
+	void printChatName();
+	std::string getChatName() const;
+protected:
+	std::string _chatname;
+	int userID[2]{0};
+	unsigned long long _ID{ 0 };
+	Array_M<Message> _messages;
 
 };
-
-Chat::Chat()
-{
-}
-
-Chat::~Chat()
-{
-}
-
-void Chat::printUsers()
-{
-	_users.print();
-}

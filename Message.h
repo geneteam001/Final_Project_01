@@ -1,30 +1,20 @@
 #pragma once
+#include <string>
 class Message
 {
 public:
 	Message();
+
 	~Message();
+	void userName(std::string userName);
+	void setMessage(std::string message);
+	void setTimeSend(std::string time);
+	std::string getMessage() const;
 
+	void printMessage();
 private:
-	string _timeSend;
-	string _message;
-	string _timeRead;
-	
-	//void ltime()
-	//{
-	//	// current date/time based on current system
-	//	time_t now = time(0);
-
-	//	// convert now to string form
-	//	char* dt = ctime(&now);
-	//}
+	std::string _userName;
+	std::string _timeSend;
+	std::string _message;
+	std::string _timeRead;
 };
-
-Message::Message()
-{
-}
-
-Message::~Message()
-{
-};
-
