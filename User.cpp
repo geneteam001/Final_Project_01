@@ -2,14 +2,10 @@
 
 User::User()
 {
-    //Временно для диагностики создания объектов
-    std::cout << _login << " User Constructed" << std::endl;
 }
 
 User::~User()
 {
-    //Временно для диагностики уничтожения объектов
-    std::cout << _login << " User Destructed" << std::endl;
 }
 
 void User::setID(unsigned long long ID)
@@ -46,7 +42,6 @@ void User::printUser()
 {
     std::cout << " " << _ID;
     std::cout << " " << _login << std::endl; /*Login:*/
-    //std::cout << " Pass: " << _pass << std::endl;
 }
 
 void User::addChat(Chat* chat)

@@ -2,14 +2,10 @@
 
 template<> Array_U<User>::Array_U()
 {
-    //временно для диагностики
-    std::cout << " Array_U<User> Constructed" << std::endl;
 }
 
 template<> Array_U<User>::~Array_U()
 {
-    //временно для диагностики
-    std::cout << " Array_U<User> Destructed" << std::endl;
 }
 
 //специализация функции print для класса User
@@ -29,7 +25,6 @@ void Array_U<User>::print()
 
 
 //специализация функции findElement для класса User
-//template<> 
 template<>
 int Array_U<User>::findElement(User user)
 {

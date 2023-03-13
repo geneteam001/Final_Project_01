@@ -12,7 +12,7 @@ public:
 	
 	int findID(T);
 	int findChatName(T);
-	int findChatName(const std::string);
+	int findChatName(std::string const);
 	void printChatNames();
 	void addChat(T chat);
 private:

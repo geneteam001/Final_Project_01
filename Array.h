@@ -12,7 +12,6 @@ protected:
     T* _dataPtr{ nullptr };
     void partCopy(const int &startIndx, const int& endIndx, T* dataPtrNew, const int& shift = 0)
     {
-        // !!! проверить корректность!
         for (size_t i = startIndx; i <= endIndx; i++)
         {
             dataPtrNew[i + shift] = _dataPtr[i];
@@ -177,22 +176,7 @@ public:
     virtual int findElement(T const value)
     {
         int ret{ -1 };
-        //if (_dataPtr)
-        //{
-        //    for (size_t i = 0; i < _size; i++)
-        //    {
-        //        if (_dataPtr[i] == value)
-        //        {
-        //            ret = i;
-        //            break;
-        //        }
-        //    }
-        //    if (ret == -1) {
-        //        throw MyException("No such element in array!");
-        //    }
-        //}
         return ret;
-        //return -1;
     };
 
     void print()

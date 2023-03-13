@@ -1,21 +1,12 @@
 #include "Array_Ch.h"
 
 
-//template<> Array_Ch<Chat>::Array_Ch()
-//{
-//}
-
 template<> Array_Ch<Chat*>::Array_Ch()
 {
-	//временно для диагностики
-	std::cout << " Array_Ch<Chat*> Constructed" << std::endl;
 }
 
 template<> Array_Ch<Chat*>::~Array_Ch()
 {
-	//временно для диагностики
-	print();
-	std::cout << " Array_Ch<Chat*> Destructed" << std::endl;
 }
 
 template<> void Array_Ch<Chat>::print()
@@ -30,7 +21,6 @@ template<> void Array_Ch<Chat>::print()
 }
 
 //специализация функции print для класса Chat* указателей
-
 template<> void Array_Ch<Chat*>::print()
 {
 	if (_dataPtr)
@@ -62,9 +52,6 @@ int Array_Ch<Chat*>::findID(Chat* chat)
 	return ret;
 }
 
-
-
-
 //функции findChatName для класса Chat* указателей
 template<>
 int Array_Ch<Chat*>::findChatName(Chat* chat)
@@ -87,7 +74,7 @@ int Array_Ch<Chat*>::findChatName(Chat* chat)
 
 //функции findChatName для типа string
 template<>
-int Array_Ch<Chat*>::findChatName(std::string chatName)
+int Array_Ch<Chat*>::findChatName(std::string const chatName)
 {
 	int ret{ -1 };
 	if (_dataPtr)
@@ -105,7 +92,6 @@ int Array_Ch<Chat*>::findChatName(std::string chatName)
 }
 
 //специализация функции printChatNames для класса Chat* указателей
-
 template<> void Array_Ch<Chat*>::printChatNames()
 {
 	if (_dataPtr)

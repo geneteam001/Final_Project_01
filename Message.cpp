@@ -4,12 +4,9 @@
 
 Message::Message()
 {
-	//Временно для диагностики создания объектов
-	std::cout << " Message Constructed" << std::endl;
 }
 Message::~Message()
 {
-	std::cout << " Message Destructed" << std::endl;
 }
 void Message::userName(const std::string userName)
 {

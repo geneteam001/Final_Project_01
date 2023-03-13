@@ -1,5 +1,3 @@
-//#pragma once
-
 #include <time.h>
 #include <iostream>
 #include "User.h"
@@ -7,7 +5,6 @@
 #include "Message.h"
 
 using namespace std;
-
 
 int main()
 {
@@ -240,12 +237,13 @@ int main()
 							{
 								currentChatPtr = chats[indx];
 								std::cout << "“акой чат уже существует: " << currentChatPtr->getChatName() << std::endl;
-
+								currentChatPtr->printMessage();
 							}
 							else if (!(indx_2 == -1))
 							{
 								currentChatPtr = chats[indx_2];
 								std::cout << "“акой чат уже существует: " << currentChatPtr->getChatName() << std::endl;
+								currentChatPtr->printMessage();
 							}
 							else //если такого чата нет - создаЄм чат и добавл€ем указатели на него в список чатов каждого пользовател€
 							{
@@ -318,9 +316,9 @@ int main()
 		}
 
 	}
-
-
-	//Ќе забыть поудал€ть тут все указатели и другую дребедень
-
+	delete currentUserPtr;
+	delete currentChatPtr;
+	delete chatsPtr;
+	delete usersPtr;
 	return 0;
 }
